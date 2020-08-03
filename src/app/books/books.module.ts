@@ -6,13 +6,8 @@ import { CreateBookComponent } from './create-book/create-book.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    ListBookComponent,
-    CreateBookComponent
-  ],
-  imports: [
-    CommonModule, SharedModule
-  ],
+  declarations: [ListBookComponent, CreateBookComponent],
+  imports: [CommonModule, SharedModule],
   exports: [ListBookComponent, CreateBookComponent]
 })
 export class BooksModule { }

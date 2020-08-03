@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { ActionIconComponent } from './action-icon/action-icon.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CardComponent } from './card/card.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
-  declarations: [HeaderComponent, ActionIconComponent],
-  imports: [
-    CommonModule,
+  declarations: [HeaderComponent, ActionIconComponent, CardComponent],
+  imports: [CommonModule, FontAwesomeModule, AppRoutingModule],
+  exports: [
+    HeaderComponent,
+    ActionIconComponent,
+    CardComponent,
     FontAwesomeModule
-  ],
-  exports: [HeaderComponent, ActionIconComponent, FontAwesomeModule]
+  ]
 })
 export class SharedModule { }

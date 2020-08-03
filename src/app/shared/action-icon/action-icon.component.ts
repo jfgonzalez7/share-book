@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit, Input } from '@angular/core';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-action-icon',
@@ -7,11 +8,14 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./action-icon.component.scss']
 })
 export class ActionIconComponent implements OnInit {
-  icon = faPlus; 
+  @Input() pathUrl: string = '';
+  @Input() icon: IconDefinition; 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  create() {
+    this.router.navigate([this.pathUrl]);
   }
-
 }

@@ -1,0 +1,14 @@
+<app-header></app-header>
+<app-action-icon [icon]="icon" pathUrl="create"></app-action-icon>
+
+<div class="container">
+  <div class="row">
+    <div class="box" *ngFor="let book of bookList">
+      <app-card
+        [name]="book.name"
+        [author]="book.author"
+        [imageUrl]="book.imageUrl"
+      ></app-card>
+    </div>
+  </div>
+</div>
