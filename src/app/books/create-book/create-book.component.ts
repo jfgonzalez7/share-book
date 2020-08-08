@@ -17,7 +17,6 @@ export class CreateBookComponent implements OnInit {
   constructor(private bookService: BookService, private router: Router) { }
 
   ngOnInit() { }
-
    
   onSubmit() {
     const idx = this.bookService.getBooks().length + 1;
@@ -27,8 +26,6 @@ export class CreateBookComponent implements OnInit {
       author: this.author,
       imageUrl: this.imageUrl
     };
-    console.log(newBook);
-    
     this.bookService.addNewBook(newBook);
     this.router.navigate(['']);
   }

@@ -13,10 +13,8 @@ export class ListBookComponent implements OnInit {
   bookList: IBook[] = [];
   icon = faPlus;
 
-  constructor(bookService: BookService) { 
+  constructor(private bookService: BookService) { 
     this.bookList = bookService.getBooks();
-    console.log(this.bookList);
-    
   }
 
   ngOnInit() { }
