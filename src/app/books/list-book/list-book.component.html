@@ -1,10 +1,11 @@
 <app-header></app-header>
 <app-action-icon [icon]="icon" pathUrl="create"></app-action-icon>
 
-<div class="container">
-  <div class="row">
+<div class="container mv0 mh4">
+  <div class="row flex flex-wrap justify-around">
     <div class="box" *ngFor="let book of bookList">
       <app-card
+        [id]="book.id"
         [name]="book.name"
         [author]="book.author"
         [imageUrl]="book.imageUrl"

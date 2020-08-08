@@ -1,0 +1,16 @@
+<app-header></app-header>
+<app-action-icon [icon]="icon" pathUrl="create"></app-action-icon>
+
+<section class="details dt mw6 pv4-m pv6-ns ba pa4 mb5 center">
+  <div class="book-image db dtc-ns v-mid-ns">
+    <img [src]="book.imageUrl" alt="Book cover" class="img-details w-100 mw7" />
+  </div>
+  <div class="book-info db dtc-ns v-mid pl3 pl5-ns lh-copy">
+    <h3 class="mv0">This is the Book</h3>
+    <h3 class="mt0">{{book.name}}</h3>
+    <p class="">Written by author {{book.author}}</p>
+    <p class="">Description: This is a short description of the book</p>
+    <hr />
+    <a class="card-link" [routerLink]="['/']">Back to homepage</a>
+  </div>
+</section>

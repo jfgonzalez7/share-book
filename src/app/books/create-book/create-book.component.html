@@ -1,2 +1,46 @@
 <app-header></app-header>
 <app-action-icon [icon]="icon" pathUrl=""></app-action-icon>
+
+<div class="sans-serif">
+  <form (ngSubmit)="onSubmit()" class="b--light-silver bg-light-purple ba pa4 measure center">
+      <h3 class="f3 fw6 ph0 mh0 mt0 mb4">Create new book</h3>
+      <div class="mt3">
+        <label class="db fw6 lh-copy f6" for="bookName">Book name</label>
+        <input
+          id="bookName"
+          type="text"
+          name="bookName"
+          required
+          class="pa2 ba hover-bg-white hover-black w-100"
+          [(ngModel)]="bookName"
+        />
+      </div>
+  
+      <div class="mv3">
+        <label class="db fw6 lh-copy f6" for="author">Book author</label>
+        <input
+          id="author"
+          type="text"
+          name="author"
+          required
+          class="pa2 ba hover-bg-white hover-black w-100"
+          [(ngModel)]="author"
+        />
+      </div>
+  
+      <div class="mv3">
+        <label class="db fw6 lh-copy f6" for="link">Cover book link</label>
+        <input
+          id="link"
+          type="text"
+          name="imageUrl"
+          class="pa2 ba w-100"
+          [(ngModel)]="imageUrl"
+        />
+      </div>
+
+    <button type="submit" class="b ph3 pv2 b--light-silver ba grow pointer f5 dib">
+      Create
+    </button>
+  </form>
+</div>
