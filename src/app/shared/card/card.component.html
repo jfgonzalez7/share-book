@@ -1,7 +1,8 @@
 <div class="card">
-  <img [src]="imageUrl" alt="book cover" class="card-cover">
+  <img [src]="imageUrl" alt="book cover" class="card-cover" />
   <div class="card-body">
-    <div class="card-title">{{name}} </div>
-    <div class="card-text">Author: {{author}} </div>
+    <div class="card-title">{{name}}</div>
+    <div class="card-text">{{author}}</div>
+    <a class="card-link" [routerLink]="['/detail', id]">View details</a>
   </div>
 </div>
