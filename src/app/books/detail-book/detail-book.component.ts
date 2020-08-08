@@ -14,11 +14,8 @@ export class DetailBookComponent {
 
   constructor(bookService: BookService, activatedRoute: ActivatedRoute) {
     activatedRoute.params.subscribe((params) => {
-      console.log(params['id']);
       this.book = bookService.getBookByPosition(params['id']);
-      console.log(this.book);
-      
     })
   }
-
+  
 }

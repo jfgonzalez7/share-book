@@ -1,8 +1,8 @@
-<div class="card">
-  <img [src]="imageUrl" alt="book cover" class="card-cover" />
-  <div class="card-body">
-    <div class="card-title">{{name}}</div>
-    <div class="card-text">{{author}}</div>
-    <a class="card-link" [routerLink]="['/detail', id]">View details</a>
+<div class="card mb3 br3 border-box shadow-5 flex flex-column">
+  <img [src]="imageUrl" alt="book cover" class="card-cover ma3 h5" />
+  <div class="card-body bt f4 pa3 flex flex-column items-center helvetica">
+    <h3 class="lh-title mb3 mt0">{{name}}</h3>
+    <div class="lh-text mb3">{{author}}</div>
+    <a class="link dark-blue underline-hover" [routerLink]="['/detail', id]">View details</a>
   </div>
 </div>
