@@ -1,5 +1,17 @@
 <header>
-  <div class="site-logo">
-    <a href="/">ShareBook</a>
+  <div class="site-logo pa3 f3 helvetica flex justify-between items-center">
+    <a class="black link" href="/">ShareBook</a>
+    <form (ngSubmit)="searchBook()">
+      <input
+        class="pa1 v-mid f4 ba"
+        type="text"
+        placeholder="Search for a book"
+        name="searchTerm"
+        [(ngModel)]="searchTerm"
+      />
+      <button class="b ph3 pv2 mh2 3b--light-silver ba pointer f5" type="submit">
+        Search
+      </button>
+    </form>
   </div>
 </header>

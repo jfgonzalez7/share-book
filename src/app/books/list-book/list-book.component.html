@@ -1,15 +1,21 @@
-<app-header></app-header>
+<app-header (bookResult)="renderResult($event)" ></app-header>
 <app-action-icon [icon]="icon" pathUrl="create"></app-action-icon>
 
-<div class="container mv0 mh4">
+<div class="container mv0 mh4 helvetica">
+  <h3 class="f4 tc mt0">{{ searchResult }}</h3>
   <div class="row flex flex-wrap justify-around">
-    <div class="box" *ngFor="let book of bookList">
-      <app-card
-        [id]="book.id"
-        [name]="book.name"
-        [author]="book.author"
-        [imageUrl]="book.imageUrl"
-      ></app-card>
-    </div>
+    <ng-container *ngIf="bookList.length > 0 else nobooks">
+      <div *ngFor="let book of bookList">
+        <app-card
+          [id]="book.id"
+          [name]="book.name"
+          [author]="book.author"
+          [imageUrl]="book.imageUrl"
+        ></app-card>
+      </div>
+    </ng-container>
+    <ng-template #nobooks>
+      <h2 class="f3 pv2">There are no books on this site yet.</h2>
+    </ng-template>
   </div>
 </div>
