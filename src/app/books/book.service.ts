@@ -17,6 +17,11 @@ export class BookService {
     return this.bookList[indexPos-1];
   }
 
+  getBookByName (title: string) {
+    const searchTerm = title.toLowerCase();
+    return this.bookList.filter(book => book.name.toLowerCase().includes(searchTerm));
+  }
+
   addNewBook (newBook: IBook) { 
     return (this.bookList = [...this.bookList, newBook]);
   }
